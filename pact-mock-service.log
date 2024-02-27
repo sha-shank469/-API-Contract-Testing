@@ -1,0 +1,249 @@
+I, [2024-02-12T17:25:39.713286 #1311353]  INFO -- : Cleared interactions
+I, [2024-02-12T17:25:39.719677 #1311353]  INFO -- : Registered expected interaction GET /employees/1
+D, [2024-02-12T17:25:39.720049 #1311353] DEBUG -- : {
+  "description": "a request for Employee with ID 1",
+  "providerState": "Employee with ID 1 exists",
+  "request": {
+    "method": "get",
+    "path": "/employees/1"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "id": 1,
+      "name": "John Doe",
+      "age": 30,
+      "department": "IT"
+    }
+  },
+  "metadata": null
+}
+I, [2024-02-12T17:25:39.725776 #1311353]  INFO -- : Received request GET /employees/1
+D, [2024-02-12T17:25:39.725912 #1311353] DEBUG -- : {
+  "path": "/employees/1",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2024-02-12T17:25:39.726117 #1311353]  INFO -- : Found matching response for GET /employees/1
+D, [2024-02-12T17:25:39.726186 #1311353] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "id": 1,
+    "name": "John Doe",
+    "age": 30,
+    "department": "IT"
+  }
+}
+I, [2024-02-12T17:25:39.729474 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.732228 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json
+I, [2024-02-12T17:25:39.737069 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.744545 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json
+I, [2024-02-12T17:25:39.750709 #1311353]  INFO -- : Cleared interactions
+I, [2024-02-12T17:25:39.754750 #1311353]  INFO -- : Registered expected interaction GET /employees
+D, [2024-02-12T17:25:39.754907 #1311353] DEBUG -- : {
+  "description": "a request for all employees",
+  "request": {
+    "method": "get",
+    "path": "/employees"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+    },
+    "body": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "age": 30,
+        "department": "IT"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "age": 35,
+        "department": "HR"
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2024-02-12T17:25:39.758826 #1311353]  INFO -- : Received request GET /employees
+D, [2024-02-12T17:25:39.758975 #1311353] DEBUG -- : {
+  "path": "/employees",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2024-02-12T17:25:39.759109 #1311353]  INFO -- : Found matching response for GET /employees
+D, [2024-02-12T17:25:39.759169 #1311353] DEBUG -- : {
+  "status": 201,
+  "headers": {
+  },
+  "body": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 30,
+      "department": "IT"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 35,
+      "department": "HR"
+    }
+  ]
+}
+I, [2024-02-12T17:25:39.762353 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.765933 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json
+I, [2024-02-12T17:25:39.770438 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.773792 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json
+I, [2024-02-12T17:25:39.779527 #1311353]  INFO -- : Cleared interactions
+I, [2024-02-12T17:25:39.782454 #1311353]  INFO -- : Registered expected interaction POST /employees
+D, [2024-02-12T17:25:39.782657 #1311353] DEBUG -- : {
+  "description": "a request to create an employee",
+  "providerState": "Employee creation is successful",
+  "request": {
+    "method": "post",
+    "path": "/employees",
+    "body": {
+      "id": 3,
+      "name": "John Smith",
+      "age": 25,
+      "department": "Marketing"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "id": 3,
+      "name": "John Smith",
+      "age": 25,
+      "department": "Marketing"
+    }
+  },
+  "metadata": null
+}
+I, [2024-02-12T17:25:39.786236 #1311353]  INFO -- : Received request POST /employees
+D, [2024-02-12T17:25:39.786388 #1311353] DEBUG -- : {
+  "path": "/employees",
+  "query": "",
+  "method": "post",
+  "body": {
+    "id": 3,
+    "name": "John Smith",
+    "age": 25,
+    "department": "Marketing"
+  },
+  "headers": {
+    "Content-Length": "69",
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2024-02-12T17:25:39.787161 #1311353]  INFO -- : Found matching response for POST /employees
+D, [2024-02-12T17:25:39.787254 #1311353] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "id": 3,
+    "name": "John Smith",
+    "age": 25,
+    "department": "Marketing"
+  }
+}
+I, [2024-02-12T17:25:39.790374 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.794003 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json
+I, [2024-02-12T17:25:39.797551 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.800712 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json
+I, [2024-02-12T17:25:39.807888 #1311353]  INFO -- : Cleared interactions
+I, [2024-02-12T17:25:39.811312 #1311353]  INFO -- : Registered expected interaction PUT /employees/1
+D, [2024-02-12T17:25:39.811441 #1311353] DEBUG -- : {
+  "description": "a request to update employee with ID 1",
+  "providerState": "Employee with ID 1 exists",
+  "request": {
+    "method": "put",
+    "path": "/employees/1",
+    "body": {
+      "name": "Shashank",
+      "age": 25,
+      "department": "IT"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "id": 1,
+      "name": "Shashank",
+      "age": 25,
+      "department": "IT"
+    }
+  },
+  "metadata": null
+}
+I, [2024-02-12T17:25:39.814452 #1311353]  INFO -- : Received request PUT /employees/1
+D, [2024-02-12T17:25:39.814570 #1311353] DEBUG -- : {
+  "path": "/employees/1",
+  "query": "",
+  "method": "put",
+  "body": {
+    "name": "Shashank",
+    "age": 25,
+    "department": "IT"
+  },
+  "headers": {
+    "Content-Length": "51",
+    "Content-Type": "application/json",
+    "Host": "localhost:1234",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2024-02-12T17:25:39.814809 #1311353]  INFO -- : Found matching response for PUT /employees/1
+D, [2024-02-12T17:25:39.814866 #1311353] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "id": 1,
+    "name": "Shashank",
+    "age": 25,
+    "department": "IT"
+  }
+}
+I, [2024-02-12T17:25:39.818411 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.822266 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json
+I, [2024-02-12T17:25:39.827179 #1311353]  INFO -- : Verifying - interactions matched
+I, [2024-02-12T17:25:39.829990 #1311353]  INFO -- : Writing pact for Employee to /home/shashank/Documents/Python_Workspace/Employee_Service_API/final_code/consumer-employee.json

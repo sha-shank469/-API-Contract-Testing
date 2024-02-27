@@ -1,0 +1,109 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Employee"
+  },
+  "interactions": [
+    {
+      "description": "a request for Employee with ID 1",
+      "providerState": "Employee with ID 1 exists",
+      "request": {
+        "method": "get",
+        "path": "/employees/1"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 1,
+          "name": "John Doe",
+          "age": 30,
+          "department": "IT"
+        }
+      }
+    },
+    {
+      "description": "a request for all employees",
+      "request": {
+        "method": "get",
+        "path": "/employees"
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": 1,
+            "name": "John Doe",
+            "age": 30,
+            "department": "IT"
+          },
+          {
+            "id": 2,
+            "name": "Jane Smith",
+            "age": 35,
+            "department": "HR"
+          }
+        ]
+      }
+    },
+    {
+      "description": "a request to create an employee",
+      "providerState": "Employee creation is successful",
+      "request": {
+        "method": "post",
+        "path": "/employees",
+        "body": {
+          "id": 3,
+          "name": "John Smith",
+          "age": 25,
+          "department": "Marketing"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 3,
+          "name": "John Smith",
+          "age": 25,
+          "department": "Marketing"
+        }
+      }
+    },
+    {
+      "description": "a request to update employee with ID 1",
+      "providerState": "Employee with ID 1 exists",
+      "request": {
+        "method": "put",
+        "path": "/employees/1",
+        "body": {
+          "name": "Shashank",
+          "age": 25,
+          "department": "IT"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 1,
+          "name": "Shashank",
+          "age": 25,
+          "department": "IT"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
